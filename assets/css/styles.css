@@ -445,7 +445,10 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
   .wf-canvas-wrap { border-right: none; border-bottom: 1px solid var(--line-dark); }
   .wf-canvas[data-layout="horizontal"] { height: 300px; }
   .wf-canvas[data-layout="vertical"] { max-height: 420px; }
-  .wf-detail { max-height: 480px; }
+  .wf-detail { max-height: 480px; padding: 22px 20px; }
+  .wf-detail-list > div { grid-template-columns: 1fr; gap: 3px; padding: 10px 0; }
+  .wf-detail-list dt { padding-top: 0; }
+  .wf-detail-head h3 { font-size: 21px; }
   .wf-cfoot { flex-wrap: wrap; gap: 14px; }
   .wf-legend-item span { display: none; }
 }
