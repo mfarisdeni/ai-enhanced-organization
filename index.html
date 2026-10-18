@@ -130,30 +130,13 @@
         <p>Klik setiap tahap untuk melihat tujuannya, siapa yang bertanggung jawab, dan apa yang dibutuhkan sebelum alur berlanjut. Diagram ini bersifat eksplorasi strategi — bukan proses operasional yang live.</p>
       </div>
 
-      <div class="wf-tabs" role="tablist" aria-label="Pilih alur kerja" id="wf-tabs"></div>
-
-      <div class="wf-panel">
-        <div class="wf-head">
-          <div class="wf-head-top">
-            <div>
-              <span class="kicker">Alur Kerja</span>
-              <h3 id="wf-head-title"></h3>
-              <p class="wf-head-desc" id="wf-head-desc"></p>
-            </div>
-            <div class="wf-toolbar">
-              <button type="button" class="btn-ghost" id="wf-tour-btn">▶ Mulai Tur Workflow</button>
-              <button type="button" class="btn-ghost" id="wf-reset-btn">⟲ Atur Ulang</button>
-            </div>
-          </div>
-          <div class="wf-progress" aria-live="polite">
-            <div class="wf-prog-row">
-              <div>
-                <div class="wf-prog-label" id="wf-prog-label"></div>
-                <div class="wf-prog-name" id="wf-prog-name"></div>
-              </div>
-              <div class="wf-prog-explored" id="wf-prog-explored"></div>
-            </div>
-            <div class="wf-segs" id="wf-prog-segs" aria-hidden="true"></div>
+      <div class="wf-console" id="wf-console">
+        <div class="wf-chead">
+          <div class="wf-tabs" role="tablist" aria-label="Pilih alur kerja" id="wf-tabs"></div>
+          <div class="wf-cprog" aria-hidden="true"><div class="wf-segs" id="wf-prog-segs"></div></div>
+          <div class="wf-cactions">
+            <button type="button" class="wf-iconbtn" id="wf-tour-btn">▶ <span>Tur Workflow</span></button>
+            <button type="button" class="wf-iconbtn" id="wf-reset-btn" title="Atur ulang">⟲</button>
           </div>
         </div>
 
@@ -163,22 +146,35 @@
           <span class="t-spacer"></span>
           <button type="button" class="t-btn" id="wf-tour-prev">← Sebelumnya</button>
           <button type="button" class="t-btn" id="wf-tour-next">Tahap Berikutnya →</button>
-          <button type="button" class="t-exit" id="wf-tour-exit">Keluar Tur</button>
+          <button type="button" class="t-exit" id="wf-tour-exit">Keluar</button>
         </div>
 
-        <div class="wf-body">
+        <div class="wf-csub">
+          <div class="wf-csub-main">
+            <h3 id="wf-head-title"></h3>
+            <p class="wf-head-desc" id="wf-head-desc"></p>
+          </div>
+          <div class="wf-cstatus" aria-live="polite">
+            <div class="wf-prog-label" id="wf-prog-label"></div>
+            <div class="wf-prog-name" id="wf-prog-name"></div>
+            <div class="wf-prog-explored" id="wf-prog-explored"></div>
+          </div>
+        </div>
+
+        <div class="wf-cbody">
           <div class="wf-canvas-wrap">
             <div class="wf-canvas" id="wf-canvas" role="group"></div>
+            <div class="wf-canvas-hint" aria-hidden="true">← geser untuk melihat seluruh alur →</div>
           </div>
           <aside class="wf-detail" id="wf-detail" aria-label="Detail tahap"></aside>
         </div>
 
-        <div class="wf-legend" aria-label="Legenda tanggung jawab">
-          <span class="wf-legend-title">LEGENDA TANGGUNG JAWAB</span>
-          <div class="wf-legend-item lg-human"><i></i><div><strong>HUMAN-LED</strong><span>Keputusan dan penilaian oleh manusia.</span></div></div>
-          <div class="wf-legend-item lg-ai"><i></i><div><strong>AI-ASSISTED</strong><span>AI membantu — manusia memutuskan.</span></div></div>
-          <div class="wf-legend-item lg-auto"><i></i><div><strong>AUTOMATED SYSTEM</strong><span>Sistem menjalankan hasil yang disetujui.</span></div></div>
-          <div class="wf-legend-item lg-approval"><i></i><div><strong>HUMAN APPROVAL REQUIRED</strong><span>Persetujuan wajib sebelum lanjut.</span></div></div>
+        <div class="wf-cfoot" aria-label="Legenda tanggung jawab">
+          <span class="wf-legend-title">LEGENDA</span>
+          <div class="wf-legend-item lg-human"><i></i><div><strong>HUMAN-LED</strong><span>Keputusan manusia</span></div></div>
+          <div class="wf-legend-item lg-ai"><i></i><div><strong>AI-ASSISTED</strong><span>AI membantu</span></div></div>
+          <div class="wf-legend-item lg-auto"><i></i><div><strong>AUTOMATED</strong><span>Sistem menjalankan</span></div></div>
+          <div class="wf-legend-item lg-approval"><i></i><div><strong>APPROVAL</strong><span>Persetujuan wajib</span></div></div>
         </div>
       </div>
     </div>

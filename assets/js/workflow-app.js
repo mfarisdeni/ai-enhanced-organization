@@ -265,7 +265,8 @@
     tourBtn.hidden = true;
     selectStage(0, { fromTour: true });
     renderTourBar();
-    canvasEl.scrollIntoView({ block: "start", behavior: reducedMotion ? "auto" : "smooth" });
+    const consoleEl = document.getElementById("wf-console");
+    if (consoleEl) consoleEl.scrollIntoView({ block: "nearest", behavior: reducedMotion ? "auto" : "smooth" });
   }
 
   function exitTour(silent) {
