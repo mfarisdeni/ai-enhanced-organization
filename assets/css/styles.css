@@ -185,7 +185,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 /* console header */
 .wf-chead {
   display: flex; align-items: center; gap: 18px;
-  padding: 12px 20px; background: #1c1d20;
+  padding: 14px 32px; background: #1c1d20;
   border-bottom: 1px solid var(--line-dark); flex: none;
 }
 .wf-tabs {
@@ -232,7 +232,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 /* tour bar */
 .wf-tourbar {
   display: flex; align-items: center; gap: 14px; flex: none;
-  padding: 10px 20px; background: rgba(197, 170, 112, 0.09);
+  padding: 10px 32px; background: rgba(197, 170, 112, 0.09);
   border-bottom: 1px solid rgba(197, 170, 112, 0.3);
 }
 .wf-tourbar[hidden] { display: none; }
@@ -252,7 +252,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 /* console sub header */
 .wf-csub {
   display: flex; justify-content: space-between; align-items: center; gap: 24px;
-  padding: 14px 24px; border-bottom: 1px solid var(--line-dark); flex: none;
+  padding: 20px 36px; border-bottom: 1px solid var(--line-dark); flex: none;
 }
 .wf-csub h3 { font-size: clamp(20px, 2.2vw, 26px); color: var(--ivory); }
 .wf-head-desc { margin: 4px 0 0; color: var(--muted-dark); font-size: 13.5px; max-width: 72ch; }
@@ -281,7 +281,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 /* horizontal canvas */
 .wf-canvas[data-layout="horizontal"] {
   display: flex; align-items: center; gap: 0;
-  overflow-x: auto; overflow-y: hidden; padding: 0 30px;
+  overflow-x: auto; overflow-y: hidden; padding: 0 40px;
   scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: rgba(197,170,112,.4) transparent;
 }
 .wf-canvas[data-layout="horizontal"] .wf-node { flex: 0 0 128px; scroll-snap-align: center; }
@@ -363,7 +363,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 }
 
 /* inspector (detail panel) */
-.wf-detail { background: #1a1b1e; padding: 22px 24px; overflow-y: auto; min-height: 0; scrollbar-width: thin; }
+.wf-detail { background: #1a1b1e; padding: 28px 36px; overflow-y: auto; min-height: 0; scrollbar-width: thin; }
 .wf-detail-empty {
   border: 1px dashed rgba(244, 239, 227, 0.25); border-radius: 10px;
   padding: 40px 26px; text-align: center; color: var(--muted-dark); font-size: 14px; height: 100%;
@@ -418,7 +418,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 /* console footer legend */
 .wf-cfoot {
   display: flex; align-items: center; gap: 24px; flex: none;
-  padding: 9px 24px; border-top: 1px solid var(--line-dark); background: #1c1d20;
+  padding: 12px 36px; border-top: 1px solid var(--line-dark); background: #1c1d20;
 }
 .wf-legend-title { font-size: 10px; letter-spacing: 0.24em; font-weight: 700; color: var(--muted-dark); }
 .wf-legend-item { display: flex; gap: 8px; align-items: center; }
